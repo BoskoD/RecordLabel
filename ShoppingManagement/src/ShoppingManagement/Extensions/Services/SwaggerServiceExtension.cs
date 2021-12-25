@@ -1,4 +1,4 @@
-namespace ContentManagement.Extensions.Services;
+namespace ShoppingManagement.Extensions.Services;
 
 using AutoMapper;
 using FluentValidation.AspNetCore;
@@ -23,17 +23,17 @@ public static class SwaggerServiceExtension
                 new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Record Label - Content API",
-                    Description = "Our API uses a REST based design, leverages the JSON data format, and relies upon HTTPS for transport. We respond with meaningful HTTP response codes and if an error occurs, we include error details in the response body. API Documentation is at tendancemusic.com/dev/docs",
+                    Title = "Record Label - Shopping API",
+                    Description = "Our API uses a REST based design, leverages the JSON data format, and relies upon HTTPS for transport. We respond with meaningful HTTP response codes and if an error occurs, we include error details in the response body. API Documentation is at carbonkitchen.com/dev/docs",
                     Contact = new OpenApiContact
                     {
-                        Name = "Record Label Content Management",
+                        Name = "Record Label Shopping Management",
                         Email = "devsupport@recordlabel.com",
-                            Url = new Uri("https://www.recordLabel.com"),
+                            Url = new Uri("https://www.recordlabel.com"),
                     },
                 });
 
-            config.IncludeXmlComments(string.Format(@$"{AppDomain.CurrentDomain.BaseDirectory}{Path.DirectorySeparatorChar}ContentManagement.WebApi.xml"));
+            config.IncludeXmlComments(string.Format(@$"{AppDomain.CurrentDomain.BaseDirectory}{Path.DirectorySeparatorChar}ShoppingManagement.WebApi.xml"));
         });
     }
 }
